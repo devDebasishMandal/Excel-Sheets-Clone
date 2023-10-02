@@ -1,0 +1,32 @@
+#header {
+  display: flex;
+  position: sticky;
+  top: 0;
+  background-color: #fff;
+}
+
+#header > b {
+  min-width: 100px;
+  text-align: center;
+  border: 1px solid rgb(173, 173, 173);
+  padding: 10px 0;
+  background-color: #fff;
+}
+
+.row {
+  display: flex;
+}
+
+.row > b,
+.row > div {
+  min-width: 100px;
+  border: 1px solid rgb(173, 173, 173);
+  padding: 10px 0;
+}
+
+.row > b:first-child {
+  background-color: #fff;
+  text-align: center;
+  position: sticky;
+  left: 0;
+}
