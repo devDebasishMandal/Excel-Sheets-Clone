@@ -27,7 +27,7 @@ function createRows(rowNumber) {
       const cell = document.createElement("div");
       //to make the cells editable (contentEditable=true)
       cell.contentEditable = "true";
-      //uniqueId={col}{row};for every cell giving id to display in page
+      //uniqueId={col}{row};for every cell giving id.
       cell.id = `${String.fromCharCode(i)}${rowNumber}`;
 
       cell.addEventListener("focus", onCellFocus);

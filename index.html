@@ -1,26 +1,55 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Excel Sheet</title>
+    <title>Excel</title>
     <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="shortcut icon" href="" type="image/x-icon">
+    <link rel="stylesheet" href="menu.css">
 </head>
+
 <body>
     <div id="options">
-        <span id="active-cell"></span>
+        
+        <div class="menus">
+            <div id="bold" onclick="onClickBold(this)">B</div>
+            <div id="italic" onclick="onClickItalic(this)">I</div>
+            <div id="underlined" onclick="onClickUnderline(this)">U</div>
+
+            <div class="material-icons text-align " data-value="left" onclick="onClickTextAlign(this)"> format_align_left</div>
+            <div class="material-icons text-align " data-value="center" onclick="onClickTextAlign(this)"> format_align_center</div>
+            <div class="material-icons text-align " data-value="right" onclick="onClickTextAlign(this)"> format_align_right</div>
+
+            <div id="text-color" >
+                <label for="colorPicker"><span class="material-icons">format_color_text</span></label>
+                <input onchange="onChangeTextColor(this)" type="color"  id="colorPicker"
+                            style="width: 0;height: 0;margin: 0;padding:0;color: transparent;">
+                    </div>
+
+            <div id="bg-color">
+                        <label for="bg-colorPicker"><span class="material-icons">format_color_fill</span></label>
+                        <input onchange="onChangeBackgroundColor(this)" type="color" name="color" id="bg-colorPicker"
+                            style="width: 0;height: 0;margin:0;padding: 0;color: transparent;">
+                    </div>
+        </div>
+        <span id="active-cell" ></span>
     </div>
-<!-- <main style="position: relative; width: 100vw; height: 100vh; "> -->
-    <div id="header">
-        <b>S.No.</b>
-    </div>
+    <main style="width: 100vw; height:100vh;overflow: scroll;">
+        <div id="header">
+            <b style="position: sticky; left:0;background-color: #fff;">S.No.</b>
+        </div>
 
-     <section id="body">
+        <section id="body">
+            <div class="row-numbers">
+            </div>
+        </section>
+    </main>
 
-     </section>
-    <!-- </main> -->
-
-<script src="menu.js"></script>
-<script src="script.js"></script>
+    <script src="menu.js"></script>
+    <script src="script.js"></script>
 </body>
+
 </html>

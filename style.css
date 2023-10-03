@@ -3,14 +3,17 @@
   position: sticky;
   top: 0;
   background-color: #fff;
+  width: fit-content;
+  z-index: 100;
 }
 
 #header > b {
   min-width: 100px;
   text-align: center;
   border: 1px solid rgb(173, 173, 173);
-  padding: 10px 0;
+  padding: 10px 1px;
   background-color: #fff;
+  box-sizing: border-box;
 }
 
 .row {
@@ -21,7 +24,9 @@
 .row > div {
   min-width: 100px;
   border: 1px solid rgb(173, 173, 173);
-  padding: 10px 0;
+  padding: 10px 1px;
+  box-sizing: border-box;
+  
 }
 
 .row > b:first-child {
@@ -29,4 +34,15 @@
   text-align: center;
   position: sticky;
   left: 0;
+}
+
+.row>div{
+  overflow:auto;
+}
+.row>div-::-webkit-scrollbar{
+  background-color: red;
+
+}
+#body{
+    width: fit-content;
 }
