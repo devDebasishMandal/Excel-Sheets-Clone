@@ -1,8 +1,52 @@
 let activeCellElement = document.getElementById("active-cell");
 const textAlignElements = document.getElementsByClassName("text-align");
+const boldButton=document.getElementById("bold");
+const italicButton=document.getElementById("italic");
+const underLineButton=document.getElementById("underlined");
+
+
+
+
 //for state management (properties of the cell)
 let activeCell = null;
 let activeOptionsState;
+
+
+function highlightOptionsButtonOnFocus(){
+//to make option buttons in sync with the state of the cell
+// 1.check if the cell is in bold state 
+//check if the cell has active-options class
+if(activeOptionsState.isBoldSelected &&!boldButton.classList.contains("active-options")){
+    // if it does not contain then add 
+    boldButton.classList.add("active-options");
+}else { //if in the state of that cell isBoldSelected is false
+  //if bold is not selected fo that cell then remove
+boldButton.classList.remove("active-options");
+}
+// 2.check if the cell is in italic state 
+  
+if(activeOptionsState.isItalicSelected &&!italicButton.classList.contains("active-options")){
+  // if it does not contain then add 
+  italicButton.classList.add("active-options");
+}else { //if in the state of that cell isItalic is false
+//if italic  is not selected fo that cell then remove
+italicButton.classList.remove("active-options");
+}
+
+// 3.check if the cell is in underline state
+
+if(activeOptionsState.isUnderLineSelected &&!underLineButton.classList.contains("active-options")){
+  // if it does not contain then add 
+  underLineButton.classList.add("active-options");
+}else { //if in the state of that cell isItalic is false
+//if italic  is not selected fo that cell then remove
+underLineButton.classList.remove("active-options");
+}
+
+
+
+
+}
 const defaultOptionsState = {
   fontFamily: "",
   isBoldSelected: false,
@@ -16,6 +60,12 @@ const defaultOptionsState = {
 
 // this function gets triggred whenever cell is focused
 function onCellFocus(event) {
+  // if active cellis present and not equal to previous cell. 
+  if(activeCell && activeCell.id===event.target.id){
+    // previously selected cell == to current selected cell
+    //because of once more the object and variables will be created so no point if once it is created. 
+    return;
+  }
   //to get cell id on focus on the cell
   // console.log(event.target.id);
   //to get the current selected cell
@@ -36,6 +86,7 @@ function onCellFocus(event) {
     backgroundColor: computedStyle.backgroundColor,
     fontSize: computedStyle.fontSize,
   };
+  highlightOptionsButtonOnFocus();
 }
 
 
