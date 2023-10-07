@@ -1,3 +1,10 @@
+body{
+  margin: 0;
+  padding: 0;
+  height: 100vh;
+  width: 100vw;
+}
+
 #header {
   display: flex;
   position: sticky;
@@ -23,10 +30,11 @@
 .row > b,
 .row > div {
   min-width: 100px;
+  max-width: 100px;
+  max-height: 40px;
   border: 1px solid rgb(173, 173, 173);
   padding: 10px 1px;
   box-sizing: border-box;
-  
 }
 
 .row > b:first-child {
@@ -37,12 +45,13 @@
 }
 
 .row>div{
-  overflow:auto;
+  overflow:scroll;
 }
-.row>div-::-webkit-scrollbar{
-  background-color: red;
+.row>div::-webkit-scrollbar {
+  display: none;
+}
 
-}
+
 #body{
     width: fit-content;
 }

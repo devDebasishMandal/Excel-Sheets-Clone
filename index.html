@@ -12,14 +12,30 @@
 </head>
 
 <body>
+    <div id="container">
+        <div class="main-menue">
+            <div class="submenue" >File</div>
+            <div class="submenue" >Home</div>
+            <div class="submenue" >Insert</div>
+        </div>
+    </div>
     <div id="options">
         
         <div class="menus">
+            
+            <select name="font-family" id="fontf">
+                <option value="Times New Roman">Times New Roman</option>
+                <option value="cursive">Cursive</option>
+                <option value="fantasy">Fantasy</option>
+                <option value="audi">Mono Space</option>
+            </select>
+            <input type="text" id="font-size class="Fsize"/>
+
             <div id="bold" onclick="onClickBold(this)">B</div>
             <div id="italic" onclick="onClickItalic(this)">I</div>
             <div id="underlined" onclick="onClickUnderline(this)">U</div>
 
-            <div class="material-icons text-align " data-value="left" onclick="onClickTextAlign(this)"> format_align_left</div>
+            <div class="material-icons text-align active-options" data-value="start" onclick="onClickTextAlign(this)"> format_align_left</div>
             <div class="material-icons text-align " data-value="center" onclick="onClickTextAlign(this)"> format_align_center</div>
             <div class="material-icons text-align " data-value="right" onclick="onClickTextAlign(this)"> format_align_right</div>
 
@@ -35,7 +51,12 @@
                             style="width: 0;height: 0;margin:0;padding: 0;color: transparent;">
                     </div>
         </div>
-        <span id="active-cell" ></span>
+        <div class="function">
+        <span id="active-cell"></span>
+        <i>fx</i>
+        <input type="text" id="search">
+        </div>
+        
     </div>
     <main style="width: 100vw; height:100vh;overflow: scroll;">
         <div id="header">

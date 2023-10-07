@@ -3,6 +3,8 @@
     justify-content: center;
     gap: 20px;
     align-items: center;
+    background-color: rgba(194, 191, 191, 0.181);
+    padding: 12px;
 }
 
 .menus >div{
@@ -19,3 +21,50 @@
     
 }
 
+#container{
+    background-color: rgba(31, 117, 31, 0.813);
+    margin: 0;
+    height: 62px;
+    padding: 0 22px ;
+    display: flex;
+    justify-content: start;
+    align-items: flex-end;
+}
+
+#container>.main-menue{
+    display: flex;
+    gap:18px;
+}
+.main-menue>div{
+    width: 62px;
+    text-align: center;
+    color: azure;
+    font-family: monospace;
+    font-size: 18px;
+    padding: 12px;
+    
+}
+.main-menue>div:hover{
+    background-color: aliceblue;
+    color:rgba(31, 117, 31, 0.813) ;
+}
+.function{
+display: block;
+    height:18px;
+   padding: 15px 15px;
+   background-color: rgba(211, 211, 211, 0.613);
+}
+
+.function>span,i,input{
+   margin-inline:12px;
+}
+.function>span{
+    font-size: 18px;
+}
+.function>i{
+    font-weight: 900;
+}
+.function>input{
+    border: none;
+    width: 85%;
+}
